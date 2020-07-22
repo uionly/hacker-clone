@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hacker-clone/static/css/main.90e4c8ef.chunk.css",
+    "main.js": "/hacker-clone/static/js/main.a58e5f49.chunk.js",
+    "main.js.map": "/hacker-clone/static/js/main.a58e5f49.chunk.js.map",
+    "runtime-main.js": "/hacker-clone/static/js/runtime-main.d42ea27c.js",
+    "runtime-main.js.map": "/hacker-clone/static/js/runtime-main.d42ea27c.js.map",
+    "static/js/2.1467fdd2.chunk.js": "/hacker-clone/static/js/2.1467fdd2.chunk.js",
+    "static/js/2.1467fdd2.chunk.js.map": "/hacker-clone/static/js/2.1467fdd2.chunk.js.map",
+    "index.html": "/hacker-clone/index.html",
+    "precache-manifest.816fa82f880dcf390b967cb95fb97013.js": "/hacker-clone/precache-manifest.816fa82f880dcf390b967cb95fb97013.js",
+    "service-worker.js": "/hacker-clone/service-worker.js",
+    "static/css/main.90e4c8ef.chunk.css.map": "/hacker-clone/static/css/main.90e4c8ef.chunk.css.map",
+    "static/js/2.1467fdd2.chunk.js.LICENSE.txt": "/hacker-clone/static/js/2.1467fdd2.chunk.js.LICENSE.txt",
+    "static/media/up.png": "/hacker-clone/static/media/up.aa710c73.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d42ea27c.js",
+    "static/js/2.1467fdd2.chunk.js",
+    "static/css/main.90e4c8ef.chunk.css",
+    "static/js/main.a58e5f49.chunk.js"
+  ]
+}
