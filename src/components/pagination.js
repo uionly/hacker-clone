@@ -1,5 +1,8 @@
 import React from "react";
-const Pagination = () => {
+import { connect } from "react-redux";
+
+const Pagination = (props) => {
+  console.log("current Page num", props.currentPageNum);
   return (
     <div className="pagination">
       <a href="">Previous | </a>
@@ -7,4 +10,7 @@ const Pagination = () => {
     </div>
   );
 };
-export default Pagination;
+function mapStateToProps({ pageNum }) {
+  return { pageNum };
+}
+export default connect(mapStateToProps)(Pagination);

@@ -1,6 +1,7 @@
 import React from "react";
-import up from "../assets/up.png";
-const NewsItem = () => {
+import { connect } from "react-redux";
+import upVoteImg from "../assets/up.png";
+const NewsItem = (props) => {
   return (
     <div>
       <div className="d-flex">
@@ -9,7 +10,7 @@ const NewsItem = () => {
         <div className="up-vote-section">
           {" "}
           <a href="#">
-            <img src={up} width="20%" />
+            <img src={upVoteImg} width="20%" />
           </a>{" "}
         </div>
         <div className="font-weight-bold news-section">
@@ -27,7 +28,7 @@ const NewsItem = () => {
         <div className="up-vote-section">
           {" "}
           <a href="#">
-            <img src={up} width="20%" />
+            <img src={upVoteImg} width="20%" />
           </a>{" "}
         </div>
         <div className="font-weight-bold news-section">
@@ -42,4 +43,9 @@ const NewsItem = () => {
     </div>
   );
 };
-export default NewsItem;
+
+function mapStateToProps({ news }) {
+  return { news };
+}
+
+export default connect(mapStateToProps)(NewsItem);

@@ -13,15 +13,16 @@ export function fetchNews(pageNum) {
       return response.json();
     })
     .then((news) => {
-      console.log(news);
-      newsData = news.data;
+      newsData = news;
     })
     .catch((err) => {
       console.log(err);
     });
 
-  return {
-    type: FETCH_NEWS,
-    payload: newsData,
+  return (dispatch) => {
+    dispatch({
+      type: FETCH_NEWS,
+      payload: newsData,
+    });
   };
 }
