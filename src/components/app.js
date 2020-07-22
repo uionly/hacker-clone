@@ -1,13 +1,12 @@
 import React from "react";
+import "../style/style.css";
+import NewsFeed from "./get_news";
 
-import NewsFeed from "../containers/get_news";
-
-export default class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <NewsFeed />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <NewsFeed />
+    </div>
+  );
+};
+export default App;
