@@ -2,28 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import upVoteImg from "../assets/up.png";
 const NewsItem = (props) => {
-  return (
-    <div>
-      <div className="d-flex">
-        <div className="comments-section">36</div>
-        <div className="font-orange vote-count-section">36</div>
-        <div className="up-vote-section">
-          {" "}
-          <a href="#">
-            <img src={upVoteImg} width="20%" />
-          </a>{" "}
-        </div>
-        <div className="font-weight-bold news-section">
-          Seemingly Impossible Swift Program{" "}
-          <span className="small-font">
-            <a href="#">(fewbutripe.com)</a> by{" "}
-            <span className="text-black">wool_gather</span> 5 hours ago{" "}
-            <a href="">[ hide ]</a>
-          </span>{" "}
-        </div>
-      </div>
-      <div className="d-flex gray-background">
-        <div className="comments-section">36</div>
+  console.log(props);
+  let listItems = <div></div>;
+  if (props.news && props.news.length > 0) {
+    const newsFeedData = props.news[0].hits;
+    console.log(newsFeedData);
+    listItems = newsFeedData.map((newsFeed) => (
+      <div key={newsFeed.objectID} className="d-flex gray-background">
+        <div className="comments-section">{newsFeed.num_comments || 0} </div>
         <div className="vote-count-section">36</div>
         <div className="up-vote-section">
           {" "}
@@ -32,18 +18,18 @@ const NewsItem = (props) => {
           </a>{" "}
         </div>
         <div className="font-weight-bold news-section">
-          Seemingly Impossible Swift Program{" "}
+          {newsFeed.story_title}{" "}
           <span className="small-font">
-            <a href="#">(fewbutripe.com)</a> by{" "}
-            <span className="text-black">wool_gather</span> 5 hours ago{" "}
-            <a href="">[ hide ]</a>
+            <a href={newsFeed.story_urls}>(ok)</a> by{" "}
+            <span className="text-black">wool_gather</span>{" "}
+            {newsFeed.created_at} <a href="">[ hide ]</a>
           </span>{" "}
         </div>
-      </div>{" "}
-    </div>
-  );
+      </div>
+    ));
+  }
+  return <ul>{listItems}</ul>;
 };
-
 function mapStateToProps({ news }) {
   return { news };
 }

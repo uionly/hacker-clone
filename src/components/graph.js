@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import LineChart from "react-linechart";
 import "../../node_modules/react-linechart/dist/styles.css";
 

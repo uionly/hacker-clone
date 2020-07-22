@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchNews } from "../actions/index";
@@ -8,14 +8,10 @@ import NewsItem from "./newsitem";
 import Pagination from "./pagination";
 import Graph from "./graph";
 const NewsFeed = (props) => {
-  const [news, setNews] = useState(props.news);
-  const [pageNum, setPageNum] = useState(1);
+  const { fetchNews } = props;
   useEffect(() => {
-    const newsData = props.fetchNews(pageNum);
-    setNews(newsData);
-    setPageNum(pageNum);
-    console.log(news);
-  }, [pageNum]);
+    fetchNews(1);
+  }, []);
   return (
     <div>
       <Header />
@@ -26,11 +22,8 @@ const NewsFeed = (props) => {
   );
 };
 
-function mapStateToProps({ pageNum, news }) {
-  return { pageNum, news };
-}
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchNews }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewsFeed);
+export default connect(null, mapDispatchToProps)(NewsFeed);
