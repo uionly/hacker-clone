@@ -1,4 +1,4 @@
-const ROOT_URL = `http://hn.algolia.com/api/v1/search_by_date`;
+const ROOT_URL = `https://hn.algolia.com/api/v1/search_by_date`;
 
 export const FETCH_NEWS = "FETCH_NEWS";
 export function fetchNewsSuccess(news) {
