@@ -5,11 +5,12 @@ import { createStore, applyMiddleware, compose } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
 
 import thunk from "redux-thunk";
+import promiseMiddleware from "redux-promise";
 
 import App from "./components/app";
 import reducers from "./reducers";
 
-const middlewares = [thunk];
+const middlewares = [promiseMiddleware, thunk];
 
 const composeEnhancer =
   typeof composeWithDevTools !== "undefined" ? composeWithDevTools : compose;
