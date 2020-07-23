@@ -1,12 +1,19 @@
 import React from "react";
+import TimeAgo from "react-timeago";
 import { connect } from "react-redux";
 import upVoteImg from "../assets/up.png";
 const NewsItem = (props) => {
-  console.log(props);
   let listItems = <div></div>;
+  const getDomain = (url) => {
+    if (url) {
+      const url_object = new URL(url);
+      return url_object.hostname;
+    } else {
+      return "";
+    }
+  };
   if (props.news && props.news.length > 0) {
     const newsFeedData = props.news[0].hits;
-    console.log(newsFeedData);
     listItems = newsFeedData.map((newsFeed) => (
       <div key={newsFeed.objectID} className="d-flex gray-background">
         <div className="comments-section">{newsFeed.num_comments || 0} </div>
@@ -18,11 +25,13 @@ const NewsItem = (props) => {
           </a>{" "}
         </div>
         <div className="font-weight-bold news-section">
-          {newsFeed.story_title}{" "}
+          {newsFeed.title}{" "}
           <span className="small-font">
-            <a href={newsFeed.story_urls}>(ok)</a> by{" "}
-            <span className="text-black">wool_gather</span>{" "}
-            {newsFeed.created_at} <a href="">[ hide ]</a>
+            <a href={newsFeed.url} target="_blank">
+              ({getDomain(newsFeed.url)})
+            </a>{" "}
+            by <span className="text-black">{newsFeed.author}</span>{" "}
+            <TimeAgo date={newsFeed.created_at} /> <a href="">[ hide ]</a>
           </span>{" "}
         </div>
       </div>

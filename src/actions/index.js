@@ -15,7 +15,7 @@ export function fetchNewsFailure(news) {
 }
 export function fetchNews(pageNum) {
   return (dispatch) => {
-    const url = `${ROOT_URL}?page=${pageNum}`;
+    const url = `${ROOT_URL}?tags=story&page=${pageNum}`;
     fetch(url)
       .then((response) => {
         if (!response.ok) {

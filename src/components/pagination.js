@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 
 const Pagination = (props) => {
-  console.log("current Page num", props.currentPageNum);
   return (
     <div className="pagination">
       <a href="">Previous | </a>
