@@ -2,7 +2,7 @@ import React from "react";
 import "../style/style.css";
 import NewsFeed from "./news_feed";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -11,14 +11,14 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/:pagination">
+        <Route path="/news">
           <NewsFeed />
         </Route>
         <Route
           exact
           path="/"
           render={() => {
-            return <Redirect to="/1" />;
+            return <Redirect to="/news" />;
           }}
         />
       </Switch>

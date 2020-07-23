@@ -1,5 +1,6 @@
 import React from "react";
 import TimeAgo from "react-timeago";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import upVoteImg from "../assets/up.png";
 const NewsItem = (props) => {
@@ -43,4 +44,4 @@ function mapStateToProps({ news }) {
   return { news };
 }
 
-export default connect(mapStateToProps)(NewsItem);
+export default withRouter(connect(mapStateToProps)(NewsItem));

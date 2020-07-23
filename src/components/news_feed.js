@@ -8,14 +8,17 @@ import Header from "./header";
 import NewsItem from "./newsitem";
 import Pagination from "./pagination";
 import Graph from "./graph";
+import { withRouter } from "react-router-dom";
 const NewsFeed = (props) => {
   const { fetchNews } = props;
-  let { pagination } = useParams();
+
+  let pagination = 1;
   console.log("page", pagination);
   useEffect(() => {
     fetchNews(pagination);
-  }, [pagination]);
+  }, [pagination, fetchNews]);
   // Get parameters from the current URL
+
   return (
     <div>
       <Header />
@@ -30,4 +33,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchNews }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(NewsFeed);
+export default withRouter(connect(null, mapDispatchToProps)(NewsFeed));

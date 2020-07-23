@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import Redirect from "react-router-dom";
+import { withRouter, Redirect, useHistory } from "react-router-dom";
 import { fetchNews } from "../actions/index";
 
 const Pagination = (props) => {
-  console.log(props);
+  const history = useHistory();
   let { currPage } = props;
   currPage = parseInt(currPage);
   const decrementPageNum = (e) => {
@@ -16,7 +16,7 @@ const Pagination = (props) => {
   const incrementPageNum = (e) => {
     e.preventDefault();
     currPage = currPage + 1;
-    fetchNews(currPage);
+    return history.push(`/news&p=${currPage}`);
   };
   return (
     <div className="pagination">
@@ -33,4 +33,4 @@ const Pagination = (props) => {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchNews }, dispatch);
 }
-export default connect(null, mapDispatchToProps)(Pagination);
+export default withRouter(connect(null, mapDispatchToProps)(Pagination));
