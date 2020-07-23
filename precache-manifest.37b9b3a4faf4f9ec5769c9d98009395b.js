@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3c930e159c675b23a6d70aef55318432",
+    "revision": "f3122af5c0a17fdd3c5bc1826188ec2f",
     "url": "/hacker-clone/index.html"
   },
   {
-    "revision": "18988b1a781d16813561",
+    "revision": "fdfcaf9c3ec21e8e4e6b",
     "url": "/hacker-clone/static/css/2.714b1602.chunk.css"
   },
   {
-    "revision": "bc4624bd2bd10ab779cc",
+    "revision": "01002e3529e31e2109a6",
     "url": "/hacker-clone/static/css/main.90e4c8ef.chunk.css"
   },
   {
-    "revision": "18988b1a781d16813561",
-    "url": "/hacker-clone/static/js/2.f79cf99e.chunk.js"
+    "revision": "fdfcaf9c3ec21e8e4e6b",
+    "url": "/hacker-clone/static/js/2.83511c9c.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/hacker-clone/static/js/2.f79cf99e.chunk.js.LICENSE.txt"
+    "revision": "64bea2e190f27355a76963b8cb94bb7b",
+    "url": "/hacker-clone/static/js/2.83511c9c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bc4624bd2bd10ab779cc",
-    "url": "/hacker-clone/static/js/main.ee6edad4.chunk.js"
+    "revision": "01002e3529e31e2109a6",
+    "url": "/hacker-clone/static/js/main.4538426b.chunk.js"
   },
   {
     "revision": "1c8fab890abddef44e61",
