@@ -11,14 +11,21 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/news">
+        <Route path="/news/:page">
           <NewsFeed />
         </Route>
         <Route
           exact
           path="/"
           render={() => {
-            return <Redirect to="/news" />;
+            return <Redirect to="/news/1" />;
+          }}
+        />
+        <Route
+          exact
+          path="/news"
+          render={() => {
+            return <Redirect to="/news/1" />;
           }}
         />
       </Switch>

@@ -7,7 +7,7 @@ const NewsItem = (props) => {
   let listItems = <div></div>;
   let currentVotes = {};
   currentVotes = JSON.parse(localStorage.getItem("currentVotes")) || {};
-  console.log(currentVotes);
+
   const getDomain = (url) => {
     if (url) {
       const url_object = new URL(url);
@@ -48,7 +48,11 @@ const NewsItem = (props) => {
       </div>
     ));
   }
-  return <ul>{listItems}</ul>;
+  return (
+    <div>
+      <ul>{listItems}</ul>
+    </div>
+  );
 };
 function mapStateToProps({ news }) {
   return { news };

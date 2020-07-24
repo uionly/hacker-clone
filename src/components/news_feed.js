@@ -1,29 +1,48 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { fetchNews } from "../actions/index";
 import Header from "./header";
 import NewsItem from "./newsitem";
-import Pagination from "./pagination";
 import Graph from "./graph";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 const NewsFeed = (props) => {
   const { fetchNews } = props;
-
-  let pagination = 1;
-  console.log("page", pagination);
+  let { page } = useParams();
+  const [currentPage, setCurrentPage] = useState(page);
   useEffect(() => {
-    fetchNews(pagination);
-  }, [pagination, fetchNews]);
+    fetchNews(currentPage);
+  }, [currentPage]);
+  const decrementPageNum = (e) => {
+    e.preventDefault();
+    setCurrentPage(parseInt(currentPage) - 1);
+  };
+  const incrementPageNum = (e) => {
+    e.preventDefault();
+    setCurrentPage(parseInt(currentPage) + 1);
+  };
   // Get parameters from the current URL
-
+  const pagination = (
+    <div className="pagination">
+      {currentPage > 1 ? (
+        <a href="#" onClick={decrementPageNum}>
+          Previous |{" "}
+        </a>
+      ) : (
+        " "
+      )}
+      <a href="#" onClick={incrementPageNum}>
+        Next
+      </a>
+    </div>
+  );
   return (
     <div>
       <Header />
       <NewsItem />
-      <Pagination currPage={pagination} />
+      {pagination}
       <Graph />
     </div>
   );
