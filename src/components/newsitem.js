@@ -26,7 +26,7 @@ const NewsItem = (props) => {
   };
   if (props.news && props.news.length > 0) {
     const newsFeedData = props.news[0].hits;
-    listItems = newsFeedData.map((newsFeed) =>
+    listItems = newsFeedData.map((newsFeed, index) =>
       currentHides[newsFeed.objectID] ? (
         ""
       ) : (
@@ -37,20 +37,25 @@ const NewsItem = (props) => {
           </div>
           <div className="up-vote-section">
             {" "}
-            <a href="#" onClick={() => upVote(newsFeed.objectID)}>
+            <a
+              href="#"
+              tabIndex={index * 2}
+              onClick={() => upVote(newsFeed.objectID)}
+            >
               <img src={upVoteImg} width="20%" />
             </a>{" "}
           </div>
           <div className="font-weight-bold news-section">
             {newsFeed.title}{" "}
             <span className="small-font">
-              <a href={newsFeed.url} target="_blank">
+              <a href={newsFeed.url} tabIndex={index * 2 + 1} target="_blank">
                 ({getDomain(newsFeed.url)})
               </a>{" "}
               by <span className="text-black">{newsFeed.author}</span>{" "}
               <TimeAgo date={newsFeed.created_at} />{" "}
               <a
                 href=""
+                tabIndex={index * 2 + 2}
                 onClick={(e) => {
                   hide(newsFeed.objectID);
                 }}
