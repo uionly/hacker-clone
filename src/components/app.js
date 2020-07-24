@@ -2,7 +2,7 @@ import React from "react";
 import "../style/style.css";
 import NewsFeed from "./news_feed";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect,
