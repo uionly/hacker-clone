@@ -2,7 +2,6 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Line } from "react-chartjs-2";
-
 const Graph = (props) => {
   const { news } = props;
   let currentVotes = JSON.parse(localStorage.getItem("currentVotes")) || {};
@@ -14,14 +13,18 @@ const Graph = (props) => {
       graphLabels.push(item.objectID);
     });
   }
-  console.log(graphDataSet);
   const data = {
     labels: graphLabels,
     datasets: [{ label: "votes", data: graphDataSet }],
   };
   return (
     <div className="graph-container">
-      <Line width={400} height={200} xLabel="ID" yLabel="Votes" data={data} />
+      <Line
+        width={200}
+        height={200}
+        data={data}
+        options={{ maintainAspectRatio: false }}
+      />
     </div>
   );
 };
