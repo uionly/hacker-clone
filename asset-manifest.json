@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/hacker-clone/static/css/main.90e4c8ef.chunk.css",
-    "main.js": "/hacker-clone/static/js/main.41891217.chunk.js",
-    "main.js.map": "/hacker-clone/static/js/main.41891217.chunk.js.map",
+    "main.js": "/hacker-clone/static/js/main.59fcc739.chunk.js",
+    "main.js.map": "/hacker-clone/static/js/main.59fcc739.chunk.js.map",
     "runtime-main.js": "/hacker-clone/static/js/runtime-main.d42ea27c.js",
     "runtime-main.js.map": "/hacker-clone/static/js/runtime-main.d42ea27c.js.map",
-    "static/js/2.2aadbe53.chunk.js": "/hacker-clone/static/js/2.2aadbe53.chunk.js",
-    "static/js/2.2aadbe53.chunk.js.map": "/hacker-clone/static/js/2.2aadbe53.chunk.js.map",
+    "static/js/2.129e48ad.chunk.js": "/hacker-clone/static/js/2.129e48ad.chunk.js",
+    "static/js/2.129e48ad.chunk.js.map": "/hacker-clone/static/js/2.129e48ad.chunk.js.map",
     "index.html": "/hacker-clone/index.html",
-    "precache-manifest.1bb1d7ce28d9675384b4ff0177393c65.js": "/hacker-clone/precache-manifest.1bb1d7ce28d9675384b4ff0177393c65.js",
+    "precache-manifest.af06a765f3407ada86eee1665b73f90c.js": "/hacker-clone/precache-manifest.af06a765f3407ada86eee1665b73f90c.js",
     "service-worker.js": "/hacker-clone/service-worker.js",
     "static/css/main.90e4c8ef.chunk.css.map": "/hacker-clone/static/css/main.90e4c8ef.chunk.css.map",
-    "static/js/2.2aadbe53.chunk.js.LICENSE.txt": "/hacker-clone/static/js/2.2aadbe53.chunk.js.LICENSE.txt",
+    "static/js/2.129e48ad.chunk.js.LICENSE.txt": "/hacker-clone/static/js/2.129e48ad.chunk.js.LICENSE.txt",
     "static/media/up.png": "/hacker-clone/static/media/up.aa710c73.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d42ea27c.js",
-    "static/js/2.2aadbe53.chunk.js",
+    "static/js/2.129e48ad.chunk.js",
     "static/css/main.90e4c8ef.chunk.css",
-    "static/js/main.41891217.chunk.js"
+    "static/js/main.59fcc739.chunk.js"
   ]
 }
