@@ -1,4 +1,4 @@
-const ROOT_URL = `https://hn.algolia.com/api/v1/search_by_date`;
+const ROOT_URL = `https://hn.algolia.com/api/v1/search`;
 
 export const FETCH_NEWS = "FETCH_NEWS";
 export const UPDATE_PAGE_NUM = "UPDATE_PAGE_NUM";
@@ -24,7 +24,7 @@ export function fetchNews(pageNum) {
   console.log(" news for page", pageNum);
   return (dispatch) => {
     const url = `${ROOT_URL}?tags=story&page=${pageNum}`;
-    console.log("fetchCallto url", pageNum);
+    console.log("fetch Call to url", pageNum);
     fetch(url)
       .then((response) => {
         if (!response.ok) {

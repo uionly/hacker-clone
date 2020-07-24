@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { withRouter, Redirect, useHistory } from "react-router-dom";
+import { withRouter, useHistory } from "react-router-dom";
 import { fetchNews } from "../actions/index";
 
 const Pagination = (props) => {
