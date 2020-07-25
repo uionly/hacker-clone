@@ -2,12 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { fetchNews } from "../actions/index";
 import Header from "./header";
 import NewsItem from "./newsitem";
 import Graph from "./graph";
-import { withRouter, useHistory } from "react-router-dom";
+import { withRouter, useHistory, Link } from "react-router-dom";
 const NewsFeed = (props) => {
   const { fetchNews } = props;
   const history = useHistory();

@@ -1,29 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware, compose } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
+import Loadable from "react-loadable";
+import { Provider as ReduxProvider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
-import thunk from "redux-thunk";
-import promiseMiddleware from "redux-promise";
-
+import "./index.css";
 import App from "./components/app";
-import reducers from "./reducers";
+import configureStore from "./store/configureStore";
+const store = configureStore(window.__REDUX_STATE__ || {});
 
-const middlewares = [promiseMiddleware, thunk];
-
-const composeEnhancer =
-  typeof composeWithDevTools !== "undefined" ? composeWithDevTools : compose;
-
-const store = createStore(
-  reducers,
-  {},
-  composeEnhancer(applyMiddleware(...middlewares))
+const AppBundle = (
+  <ReduxProvider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </ReduxProvider>
 );
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.querySelector(".container")
-);
+window.onload = () => {
+  Loadable.preloadReady().then(() => {
+    ReactDOM.hydrate(AppBundle, document.getElementById("root"));
+  });
+};
