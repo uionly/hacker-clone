@@ -7,9 +7,10 @@ import { fetchNews } from "../actions/index";
 import Header from "./header";
 import NewsItem from "./newsitem";
 import Graph from "./graph";
-import { withRouter } from "react-router-dom";
+import { withRouter, useHistory } from "react-router-dom";
 const NewsFeed = (props) => {
   const { fetchNews } = props;
+  const history = useHistory();
   let { page } = useParams();
   const [currentPage, setCurrentPage] = useState(page);
   useEffect(() => {
@@ -17,10 +18,12 @@ const NewsFeed = (props) => {
   }, [currentPage]);
   const decrementPageNum = (e) => {
     e.preventDefault();
+    history.push(`/news/${parseInt(currentPage) - 1}`);
     setCurrentPage(parseInt(currentPage) - 1);
   };
   const incrementPageNum = (e) => {
     e.preventDefault();
+    history.push(`/news/${parseInt(currentPage) + 1}`);
     setCurrentPage(parseInt(currentPage) + 1);
   };
   // Get parameters from the current URL
