@@ -1,13 +1,7 @@
 const ROOT_URL = `https://hn.algolia.com/api/v1/search`;
 
 export const FETCH_NEWS = "FETCH_NEWS";
-export const UPDATE_PAGE_NUM = "UPDATE_PAGE_NUM";
-export function updatePageNum(pageNum) {
-  return {
-    type: UPDATE_PAGE_NUM,
-    payload: pageNum,
-  };
-}
+
 export function fetchNewsSuccess(news) {
   return {
     type: FETCH_NEWS,

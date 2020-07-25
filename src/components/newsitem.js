@@ -30,7 +30,10 @@ const NewsItem = (props) => {
       currentHides[newsFeed.objectID] ? (
         ""
       ) : (
-        <div key={newsFeed.objectID} className="d-flex gray-background">
+        <div
+          key={newsFeed.objectID}
+          className={`d-flex ${index % 2 ? "" : "gray-background"} `}
+        >
           <div className="comments-section">{newsFeed.num_comments} </div>
           <div className="vote-count-section">
             {currentVotes[newsFeed.objectID] || 0}
