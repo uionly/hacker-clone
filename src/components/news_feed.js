@@ -7,7 +7,7 @@ import { fetchNews } from "../actions/index";
 import Header from "./header";
 import NewsItem from "./newsitem";
 import Graph from "./graph";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 const NewsFeed = (props) => {
   const { fetchNews } = props;
   let { page } = useParams();
@@ -27,15 +27,23 @@ const NewsFeed = (props) => {
   const pagination = (
     <div className="pagination">
       {currentPage > 1 ? (
-        <a href="#" onClick={decrementPageNum}>
+        <Link
+          to={`${parseInt(currentPage) - 1}`}
+          onClick={decrementPageNum}
+          tabIndex="100"
+        >
           Previous |{" "}
-        </a>
+        </Link>
       ) : (
         " "
       )}
-      <a href="#" onClick={incrementPageNum}>
+      <Link
+        to={`${parseInt(currentPage) + 1}`}
+        onClick={incrementPageNum}
+        tabIndex="105"
+      >
         Next
-      </a>
+      </Link>
     </div>
   );
   return (
