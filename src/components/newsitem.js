@@ -1,6 +1,6 @@
 import React from "react";
 import TimeAgo from "react-timeago";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import upVoteImg from "../assets/up.png";
 const NewsItem = (props) => {
@@ -40,13 +40,12 @@ const NewsItem = (props) => {
           </div>
           <div className="up-vote-section">
             {" "}
-            <a
-              href="#"
+            <Link
               tabIndex={index * 2}
               onClick={() => upVote(newsFeed.objectID)}
             >
               <img src={upVoteImg} width="20%" />
-            </a>{" "}
+            </Link>{" "}
           </div>
           <div className="font-weight-bold news-section">
             {newsFeed.title}{" "}
@@ -56,15 +55,14 @@ const NewsItem = (props) => {
               </a>{" "}
               by <span className="text-black">{newsFeed.author}</span>{" "}
               <TimeAgo date={newsFeed.created_at} />{" "}
-              <a
-                href=""
+              <Link
                 tabIndex={index * 2 + 2}
                 onClick={(e) => {
                   hide(newsFeed.objectID);
                 }}
               >
                 [ hide ]
-              </a>
+              </Link>
             </span>{" "}
           </div>
         </div>
