@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f4800ef3f92c63870ebaf6a6725950bb",
+    "revision": "e7a7089bcc0a33d0b8006d34d9e9c9d9",
     "url": "/hacker-clone/index.html"
   },
   {
-    "revision": "7f89683c3c5f18c82815",
+    "revision": "000ad5ffd5f1a82e8c8a",
     "url": "/hacker-clone/static/css/main.279cd90d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hacker-clone/static/js/2.893134a9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7f89683c3c5f18c82815",
-    "url": "/hacker-clone/static/js/main.869f9ebe.chunk.js"
+    "revision": "000ad5ffd5f1a82e8c8a",
+    "url": "/hacker-clone/static/js/main.d0936c6d.chunk.js"
   },
   {
     "revision": "1c8fab890abddef44e61",
