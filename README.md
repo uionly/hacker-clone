@@ -3,6 +3,16 @@
 This is clone of [hacker news](https://news.ycombinator.com/) built on react & redux.
 Deployed url (Github pages) : [Click here](https://uionly.github.io/hacker-clone/#/news/1)
 
+<p align="center">
+  <a href="https://react-hn.now.sh" target="_blank" rel="noopener noreferrer">
+    <img width="720" alt="react-hackernews" src="https://raw.githubusercontent.com/uionly/hacker-clone/readme-updates/src/assets/hn.png">
+    <br>
+    Live Demo
+  </a>
+</p>
+
+## CI/CD
+
 Github action is created for publishing the page.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
