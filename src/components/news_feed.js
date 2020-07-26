@@ -15,7 +15,7 @@ const NewsFeed = (props) => {
   const [currentPage, setCurrentPage] = useState(page);
   useEffect(() => {
     fetchNews(currentPage);
-  }, [currentPage]);
+  }, [currentPage, fetchNews]);
   const decrementPageNum = (e) => {
     e.preventDefault();
     history.push(`/news/${parseInt(currentPage) - 1}`);

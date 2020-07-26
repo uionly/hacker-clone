@@ -44,13 +44,18 @@ const NewsItem = (props) => {
               tabIndex={index * 2}
               onClick={() => upVote(newsFeed.objectID)}
             >
-              <img src={upVoteImg} width="20%" />
+              <img alt="Upvote" src={upVoteImg} width="20%" />
             </Link>{" "}
           </div>
           <div className="font-weight-bold news-section">
             {newsFeed.title}{" "}
             <span className="small-font">
-              <a href={newsFeed.url} tabIndex={index * 2 + 1} target="_blank">
+              <a
+                href={newsFeed.url}
+                tabIndex={index * 2 + 1}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 ({getDomain(newsFeed.url)})
               </a>{" "}
               by <span className="text-black">{newsFeed.author}</span>{" "}
