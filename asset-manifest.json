@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hacker-clone/static/css/main.279cd90d.chunk.css",
-    "main.js": "/hacker-clone/static/js/main.d0936c6d.chunk.js",
-    "main.js.map": "/hacker-clone/static/js/main.d0936c6d.chunk.js.map",
+    "main.js": "/hacker-clone/static/js/main.3f809dcd.chunk.js",
+    "main.js.map": "/hacker-clone/static/js/main.3f809dcd.chunk.js.map",
     "runtime-main.js": "/hacker-clone/static/js/runtime-main.d42ea27c.js",
     "runtime-main.js.map": "/hacker-clone/static/js/runtime-main.d42ea27c.js.map",
     "static/js/2.893134a9.chunk.js": "/hacker-clone/static/js/2.893134a9.chunk.js",
     "static/js/2.893134a9.chunk.js.map": "/hacker-clone/static/js/2.893134a9.chunk.js.map",
     "index.html": "/hacker-clone/index.html",
-    "precache-manifest.ecf3d476c383aaa8267eb6b00c3d5fa0.js": "/hacker-clone/precache-manifest.ecf3d476c383aaa8267eb6b00c3d5fa0.js",
+    "precache-manifest.7f5353c87ee323372e94deb71027f100.js": "/hacker-clone/precache-manifest.7f5353c87ee323372e94deb71027f100.js",
     "service-worker.js": "/hacker-clone/service-worker.js",
     "static/css/main.279cd90d.chunk.css.map": "/hacker-clone/static/css/main.279cd90d.chunk.css.map",
     "static/js/2.893134a9.chunk.js.LICENSE.txt": "/hacker-clone/static/js/2.893134a9.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.d42ea27c.js",
     "static/js/2.893134a9.chunk.js",
     "static/css/main.279cd90d.chunk.css",
-    "static/js/main.d0936c6d.chunk.js"
+    "static/js/main.3f809dcd.chunk.js"
   ]
 }
